@@ -18,7 +18,7 @@ RSpec.describe Studio do
       @movie_5 = Movie.create!(title: 'Mean Girls', creation_year: '2004', genre: 'Comedy', studio_id: @studio_2.id)
     end
     
-    describe '#studio_movie' do 
+    describe '#studio_movies' do 
       it 'returns all movies associated with a studio' do 
         expect(@studio_1.studio_movies).to eq([@movie_1, @movie_2, @movie_3])
         expect(@studio_2.studio_movies).to eq([@movie_4, @movie_5])

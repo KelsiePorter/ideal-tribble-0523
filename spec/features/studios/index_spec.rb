@@ -31,7 +31,6 @@ RSpec.describe 'studios index page' do
     @movie_4.actors << @actor_4
 
     @movie_5.actors << @actor_6
-
   end
   #US1
   it 'displays all studios and their attributes' do 

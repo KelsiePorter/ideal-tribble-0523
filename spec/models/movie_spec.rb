@@ -20,6 +20,7 @@ RSpec.describe Movie do
       @movie_1.actors << @actor_5
       @movie_1.actors << @actor_6
     end
+    
     describe '#youngest_oldest_actors' do 
       it 'returns actors in order from youngest to oldest' do 
 
