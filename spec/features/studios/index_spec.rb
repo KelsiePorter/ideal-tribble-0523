@@ -40,11 +40,13 @@ RSpec.describe 'studios index page' do
     within("section#studio-#{@studio_1.id}") do
       expect(page).to have_content(@studio_1.name)
       expect(page).to have_content(@studio_1.location)
+      expect(page).to_not have_content(@studio_2.name)
     end
     
     within("section#studio-#{@studio_2.id}") do
       expect(page).to have_content(@studio_2.name)
       expect(page).to have_content(@studio_2.location)
+      expect(page).to_not have_content(@studio_1.location)
     end
   end
   #US1
@@ -61,6 +63,7 @@ RSpec.describe 'studios index page' do
       expect(page).to have_content(@movie_3.title)
       expect(page).to have_content(@movie_3.creation_year)
       expect(page).to have_content(@movie_3.genre)
+      expect(page).to_not have_content(@movie_4.title)
     end
 
     within("section#studio-#{@studio_2.id}") do
@@ -70,6 +73,7 @@ RSpec.describe 'studios index page' do
       expect(page).to have_content(@movie_5.title)
       expect(page).to have_content(@movie_5.creation_year)
       expect(page).to have_content(@movie_5.genre)
+      expect(page).to_not have_content(@movie_1.title)
     end
   end
 end
