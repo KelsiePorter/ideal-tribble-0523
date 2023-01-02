@@ -26,5 +26,12 @@ RSpec.describe Movie do
         expect(@movie_1.youngest_oldest_actors).to eq([@actor_1, @actor_5, @actor_6])
       end
     end
+
+    describe '#average_age' do 
+      it 'returns the average age of the movies actors' do 
+
+        expect(@movie_1.average_age).to eq(42)
+      end
+    end
   end
 end
