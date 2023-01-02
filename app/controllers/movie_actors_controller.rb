@@ -1,8 +1,9 @@
-class MovieActors < ApplicationController
+class MovieActorsController < ApplicationController
 
   def create
+    MovieActor.create(permitted_params)
 
-    redirect_to
+    redirect_to "/movies/#{permitted_params[:movie_id]}"
   end
 
   private

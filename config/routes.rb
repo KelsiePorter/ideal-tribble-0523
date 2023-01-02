@@ -8,5 +8,5 @@ Rails.application.routes.draw do
   get '/movies/:id', to: 'movies#show'
 
   #movie_actors
-  post '/movies/:actor_id/actors', to: 'movie_actors#create'
+  post '/movies/:movie_id/actors', to: 'movie_actors#create'
 end

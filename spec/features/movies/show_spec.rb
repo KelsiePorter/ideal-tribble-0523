@@ -68,8 +68,8 @@ RSpec.describe 'movies show page' do
 
     fill_in "Actor", with: @actor_2.id
     click_button "Add Actor"
-    
-    expect(current_path).to eq("movies/#{@movie_1.id}")
+
+    expect(current_path).to eq("/movies/#{@movie_1.id}")
     expect(page).to have_content(@actor_2.name)
     expect(page).to have_content(@actor_2.age)
   end
