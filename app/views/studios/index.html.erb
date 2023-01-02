@@ -1,0 +1,10 @@
+<h1>Studios Index Page</h1>
+
+<% @studios.each do |studio| %>
+<section id=<%= "studio-#{studio.id}"%>>
+  <p><strong>Studio Name: </strong><%= studio.name %></p>
+  <p><strong>Studio Location: </strong><%= studio.location %></p>
+  <p><strong>Studio Location: </strong><%= studio.location %></p>
+  -------------------------------------------------------
+  </section>
+<% end %>
