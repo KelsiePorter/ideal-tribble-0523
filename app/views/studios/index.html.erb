@@ -4,7 +4,13 @@
 <section id=<%= "studio-#{studio.id}"%>>
   <p><strong>Studio Name: </strong><%= studio.name %></p>
   <p><strong>Studio Location: </strong><%= studio.location %></p>
-  <p><strong>Studio Location: </strong><%= studio.location %></p>
+  <p><strong>Movies at this studio: </strong></p>
+    <% studio.studio_movies.each do |movie| %>
+      <p><strong>Title: </strong><%= movie.title %></p>
+      <p><strong>Creation Year: </strong><%= movie.creation_year %></p>
+      <p><strong>Genre: </strong><%= movie.genre %></p>
+      ----
+    <% end %>
   -------------------------------------------------------
   </section>
 <% end %>

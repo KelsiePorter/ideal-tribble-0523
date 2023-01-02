@@ -50,7 +50,6 @@ RSpec.describe 'studios index page' do
   #US1
   it 'for each studio I see all of the studios movies and the movies attributes' do 
     visit '/studios'
-    # save_and_open_page
 
     within("section#studio-#{@studio_1.id}") do
       expect(page).to have_content(@movie_1.title)
